@@ -33,9 +33,10 @@ class Visitor extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['key'], 'required'],
+            [['key', 'project_id'], 'required'],
             [['project_id'], 'integer'],
             [['email', 'first_name', 'last_name', 'key'], 'string', 'max' => 255],
+            [['key'], 'unique'],
             [['email'], 'unique'],
             [['project_id'], 'exist', 'skipOnError' => true, 'targetClass' => Project::className(), 'targetAttribute' => ['project_id' => 'id']],
         ];
@@ -47,12 +48,12 @@ class Visitor extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'email' => Yii::t('app', 'Email'),
-            'first_name' => Yii::t('app', 'First Name'),
-            'last_name' => Yii::t('app', 'Last Name'),
-            'key' => Yii::t('app', 'Key'),
-            'project_id' => Yii::t('app', 'Project ID'),
+            'id' => 'ID',
+            'email' => 'Email',
+            'first_name' => 'First Name',
+            'last_name' => 'Last Name',
+            'key' => 'Key',
+            'project_id' => 'Project ID',
         ];
     }
 
@@ -70,14 +71,5 @@ class Visitor extends \yii\db\ActiveRecord
     public function getProject()
     {
         return $this->hasOne(Project::className(), ['id' => 'project_id']);
-    }
-
-    /**
-     * @inheritdoc
-     * @return VisitorQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new VisitorQuery(get_called_class());
     }
 }

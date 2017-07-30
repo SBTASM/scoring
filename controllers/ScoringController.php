@@ -12,6 +12,7 @@ use app\models\Domain;
 use app\models\Page;
 use app\models\Project;
 use app\models\Scoring;
+use app\models\Visitor;
 use yii\rest\Controller;
 use yii\web\NotFoundHttpException;
 
@@ -25,6 +26,14 @@ class ScoringController extends Controller
         if(is_null($project)){
             throw new NotFoundHttpException('Invalid key!!!');
         }
+
+        $visitor = Visitor::find()->where(['key' => $data['visitor_key']])->one();
+        if(is_null($visitor)){
+            $visitor = new Visitor(['key' => $data['visitor_key']]);
+            $visitor->project_id = $project->id;
+            $visitor->save();
+        }
+
 
         $domain_name = $data['host_name'];
         $domain = Domain::find()->where(['name' => $domain_name])->one();
@@ -61,8 +70,8 @@ class ScoringController extends Controller
         $scoring->history_length = $data['history_length'];
         $scoring->size_screen_w = $data['size_screen_w'];
         $scoring->size_screen_h = $data['size_screen_h'];
-        $scoring->size_doc_w = $data['size_doc_w'];
-        $scoring->size_doc_h = $data['size_doc_h'];
+//        $scoring->size_doc_w = $data['size_doc_w'];
+//        $scoring->size_doc_h = $data['size_doc_h'];
         $scoring->size_in_w = $data['size_in_w'];
         $scoring->size_in_h = $data['size_in_h'];
         $scoring->size_avail_w = $data['size_avail_w'];
@@ -70,9 +79,9 @@ class ScoringController extends Controller
         $scoring->scr_color_depth = $data['scr_color_depth'];
         $scoring->scr_pixel_depth = $data['scr_pixel_depth'];
 
-//        $scripts->visitor_key = $data['visitor_key'];
+        $scoring->visitor_id = $visitor->id;
 
-        $scoring->first_cookie_record = $data['first_cookie_record'];
+//        $scoring->first_cookie_record = (string)$data['first_cookie_record'];
         $scoring->geo_ip = $data['geo_ip'];
         $scoring->geo_country_code = $data['geo_country_code'];
         $scoring->geo_region_code = $data['geo_region_code'];
@@ -82,9 +91,11 @@ class ScoringController extends Controller
         $scoring->geo_time_zone = $data['geo_time_zone'];
         $scoring->geo_latitude = $data['geo_latitude'];
         $scoring->geo_longitude = $data['geo_longitude'];
-        $scoring->visitor_email = $data['visitor_email'];
+//        $scoring->visitor_email = $data['visitor_email'];
 
-        $scoring->save();
+        if(!$scoring->save()){
+            return $this->serializeData(['errors' => $scoring->getErrors()]);
+        }
 
         return $this->serializeData(['result' => true]);
     }

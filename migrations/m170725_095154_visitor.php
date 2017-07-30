@@ -28,11 +28,11 @@ class m170725_095154_visitor extends Migration
 
         $this->createTable("{{%visitor}}", [
             'id' => $this->primaryKey(),
-            'email' => $this->string()->unique(),
-            'first_name' => $this->string(),
-            'last_name' => $this->string(),
-            'key' => $this->string()->notNull(),
-            'project_id' => $this->integer(),
+            'email' => $this->string()->unique()->defaultValue(NULL),
+            'first_name' => $this->string()->defaultValue(NULL),
+            'last_name' => $this->string()->defaultValue(NULL),
+            'key' => $this->string()->unique()->notNull(),
+            'project_id' => $this->integer()->notNull(),
         ], $tableOptions);
 
         $this->createIndex('idx-visitor-project', 'visitor', 'project_id');

@@ -7,4 +7,3 @@
     }
 </script>
 <script src="<?= \yii\helpers\Url::to('@web/js/scoring.js', true) ?>"></script>
-</script>

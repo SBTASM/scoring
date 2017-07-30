@@ -38,29 +38,34 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
+
+    $items = [
+        ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
+        ['label' => Yii::t('app', 'Site'), 'items' => [
             ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']],
             ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
+        ]],
+        ['label' => Yii::t('app', 'Scoring'), 'items' => [
+            ['label' => Yii::t('app', 'Domains'), 'url' => ['domain/index']],
+            ['label' => Yii::t('app', 'Visitors'), 'url' => ['visitor/index']],
             ['label' => Yii::t('app', 'Projects'), 'url' => ['project/index']],
             ['label' => Yii::t('app', 'Get code'), 'url' => ['project/get-code']],
             ['label' => Yii::t('app', 'Scorings'), 'url' => ['data/index']],
             ['label' => Yii::t('app', 'Pages'), 'url' => ['page/index']],
-            Yii::$app->user->isGuest ? (
-                ['label' => Yii::t("app", "Login"), 'url' => ['/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/logout'], 'post')
-                . Html::submitButton(
-                    Yii::t('app', 'Logout ({username})', ['username' => Yii::$app->user->identity->username]),
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
+        ]],
+        !\Yii::$app->user->isGuest ? '<li>'
+            . Html::beginForm(['/logout'], 'post')
+            . Html::submitButton(
+                Yii::t('app', 'Logout ({username})', ['username' => Yii::$app->user->identity->username]),
+                ['class' => 'btn btn-link logout']
             )
-        ],
+            . Html::endForm()
+            . '</li>' : ''
+    ];
+
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items' => \Yii::$app->user->isGuest ? [['label' => Yii::t("app", "Login"), 'url' => ['/login']]] : $items,
     ]);
     NavBar::end();
     ?>

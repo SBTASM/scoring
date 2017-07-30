@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -22,11 +22,23 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'name',
-            'domain_id',
+            [
+                'label' => 'name',
+                'attribute' => 'name',
+                'value' => function($model){
+                    return urldecode($model->name);
+                }
+            ],
+            [
+                'label' => 'Domain',
+                'attribute' => 'domain_id',
+                'value' => function($model){
+                    return $model->getDomain()->one()->name;
+                }
+            ],
             'rating',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => \kartik\grid\ActionColumn::className()],
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>

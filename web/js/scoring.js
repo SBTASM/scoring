@@ -1,3 +1,70 @@
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function checkCookie(project_key) {
+    var cookie_name = "scoring_project_key";
+    var cookie_project_key = getCookie(cookie_name);
+    if (cookie_project_key != "") {
+        cookie_name = cookie_name + "visitor_generated_id";
+        var cookie_visitor_key = getCookie(cookie_name);
+        var cookie_data = new Object();
+        cookie_data = {
+            project_key: cookie_project_key,
+            visitor_key: cookie_visitor_key,
+            first_cookie_record: 0
+        };
+        return cookie_data;
+    } else {
+        setCookie(cookie_name, project_key, 8000);
+        var generated_id = generateUniqueId();
+        setCookie(cookie_name + "visitor_generated_id", generated_id, 8000);
+        cookie_data = {
+            project_key: project_key,
+            visitor_key: generated_id,
+            first_cookie_record: 1
+        };
+        return cookie_data;
+    }
+}
+function generateUniqueId() {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    }
+
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        s4() + '-' + s4() + s4() + s4();
+}
+function getVisitorKey(){
+    var cookie = checkCookie(scoringProjectKey());
+
+    if (navigator.cookieEnabled) {
+        var visitor_key = cookie['visitor_key'];
+        var first_cookie_record = cookie['first_cookie_record'];
+    }
+
+    return visitor_key;
+}
+
 function scoring_with_email(){
     if (!window.jQuery) {
         alert("no jQuery");
@@ -23,93 +90,24 @@ function scoring(email_from_form) {
         var geo_longitude = JSON.stringify(data.longitude, null, 2);
 
         var project_key = scoringProjectKey();
-        /*var project_key="7c1af741-94ac-cafb-fe5c-f5ea8abcc09e";*/
-        /*var project_key=__no__key__;*/
-        /*this row generates by script in main program*/
-        /*cookies functions*/
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toGMTString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-        }
-
-        function getCookie(cname) {
-            var name = cname + "=";
-            var decodedCookie = decodeURIComponent(document.cookie);
-            var ca = decodedCookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-
-        function checkCookie(project_key) {
-            var cookie_name = "scoring_ShFgTjGq_project_key";
-            var cookie_project_key = getCookie(cookie_name);
-            if (cookie_project_key != "") {
-                cookie_name = cookie_name + "_visitor_generated_id";
-                var cookie_visitor_key = getCookie(cookie_name);
-                var cookie_data = new Object();
-                cookie_data = {
-                    project_key: cookie_project_key,
-                    visitor_key: cookie_visitor_key,
-                    first_cookie_record: 0
-                };
-                return cookie_data;
-            } else {
-                setCookie(cookie_name, project_key, 8000);
-                var generated_id = generateUniqueId();
-                setCookie(cookie_name + "_visitor_generated_id", generated_id, 8000);
-                cookie_data = {
-                    project_key: project_key,
-                    visitor_key: generated_id,
-                    first_cookie_record: 1
-                };
-                return cookie_data;
-            }
-        }
-
-        function generateUniqueId() {
-            function s4() {
-                return Math.floor((1 + Math.random()) * 0x10000)
-                    .toString(16)
-                    .substring(1);
-            }
-
-            return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-                s4() + '-' + s4() + s4() + s4();
-        }
-
-        if (navigator.cookieEnabled) {
-            var cookie = checkCookie(project_key);
-            var visitor_key = cookie['visitor_key'];
-            var first_cookie_record = cookie['first_cookie_record'];
-        }
-
 
         function getBrowserPluginsList() {
-            var x=navigator.plugins.length; // store the total no of plugin stored
+            var x = navigator.plugins.length; // store the total no of plugin stored
             var plugins_list;
-            for(var i=0;i<x;i++)
+            for(var i = 0; i < x; i++)
             {
-                if(i==0) plugins_list=navigator.plugins[i].name + "; ";
+                if(i == 0) plugins_list=navigator.plugins[i].name + "; ";
                 else plugins_list+=navigator.plugins[i].name + "; ";
             }
             return plugins_list;
         }
 
+        var first_cookie_record = checkCookie(project_key);
         //Список установленых в браузере плагинов
         var browser_plugins_list = getBrowserPluginsList();
         //Имя браузера
         var browser_name;
-        browser_name = navigator.appName;
+        browser_name = navigator.appCodeName;
         //Движек браузера
         var browser_engine;
         browser_engine = navigator.product;
@@ -134,6 +132,7 @@ function scoring(email_from_form) {
         //Поддержка Cookies
         var data_cookies_enabled;
         data_cookies_enabled = navigator.cookieEnabled;
+        var visitor_key = getVisitorKey();
         /*//Cookies
          var data_cookies;
          data_cookies = document.cookie;
