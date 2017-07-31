@@ -17,7 +17,7 @@ $layout = <<< HTML
 
 <div class="clearfix"></div>
 <hr>
-{items}
+<div class="text-center">{items}</div>
 <div class="text-center">{pager}</div>
 HTML;
 
@@ -41,7 +41,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
 
-//            'visitor_id',
+            [
+                'label' => 'Visitor key',
+                'attribute' => 'visitor_id',
+                'value' => function($model){
+                    return is_null($model->getVisitor()->one()) ? NULL : $model->getVisitor()->one()->key;
+                }
+            ],
             [
                 'label' => 'Domain',
                 'attribute' => 'domain_id',
@@ -68,6 +74,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     return urldecode($model->page_on);
                  }
              ],
+            [
+                'label' => 'Created at',
+                'attribute' => 'ceated_at',
+                'value' => function($model){
+                    return date("Y-m-d H:i:s", $model->created_at);
+                }
+            ],
 //             'referrer',
             // 'history_length',
             // 'size_screen_w',
@@ -81,7 +94,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'scr_color_depth',
             // 'scr_pixel_depth',
             // 'host_name',
-             'geo_ip',
+//             'geo_ip',
             // 'geo_country_code',
             // 'geo_region_code',
             // 'geo_region_name',
@@ -93,6 +106,14 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'visitor_email:email',
             // 'first_cookie_record',
             // 'browser_plugins_list',
+
+            [
+                'label' => \Yii::t('app', 'Read') . Yii::t('app', 'Write'),
+                'attribute' => 'read_write',
+                'value' => function($model){
+                    return $model->read_write === 1 ? Yii::t('app', 'Write') : Yii::t('app', 'Read');
+                }
+            ],
 
             ['class' => \kartik\grid\ActionColumn::className()],
         ],

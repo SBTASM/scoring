@@ -58,7 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'scr_color_depth',
             'scr_pixel_depth',
             'host_name',
-            'geo_ip',
+//            'geo_ip',
             'geo_country_code',
             'geo_region_code',
             'geo_region_name',
@@ -68,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'geo_latitude',
             'geo_longitude',
             'visitor_email:email',
-            'first_cookie_record',
+//            'first_cookie_record',
             'browser_plugins_list',
         ],
     ]) ?>

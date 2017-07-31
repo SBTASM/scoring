@@ -32,10 +32,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 
             'id',
-            'email:email',
-            'first_name',
-            'last_name',
+//            'email:email',
+//            'first_name',
+//            'last_name',
             'key',
+             [
+                 'label' =>  'request count',
+                 'value' => function($model){
+                    return $model->getScorings()->count();
+                 }
+             ],
              [
                  'label' => Yii::t('app', 'Project'),
                  'attribute' => 'project_id',
@@ -43,6 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $model->getProject()->one()->name;
                  }
              ],
+            'ip',
             ['class' => \kartik\grid\ActionColumn::className()],
         ],
     ]); ?>

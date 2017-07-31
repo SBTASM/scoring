@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "scripts".
+ * This is the model class for table "scoring".
  *
  * @property integer $id
  * @property integer $project_id
@@ -37,7 +37,6 @@ use Yii;
  * @property string $scr_color_depth
  * @property string $scr_pixel_depth
  * @property string $host_name
- * @property string $geo_ip
  * @property string $geo_country_code
  * @property string $geo_region_code
  * @property string $geo_region_name
@@ -47,8 +46,10 @@ use Yii;
  * @property string $geo_latitude
  * @property string $geo_longitude
  * @property string $visitor_email
- * @property string $first_cookie_record
  * @property string $browser_plugins_list
+ * @property integer $read_write
+ * @property integer $created_at
+ * @property integer $updated_at
  *
  * @property Domain $domain
  * @property Project $project
@@ -70,9 +71,9 @@ class Scoring extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['project_id', 'domain_id'], 'required'],
-            [['project_id', 'visitor_id', 'domain_id'], 'integer'],
-            [['browser_name', 'browser_engine', 'browser_agent', 'browser_language', 'browser_online', 'browser_platform', 'browser_java', 'browser_version', 'data_cookies_enabled', 'data_cookies', 'data_cookies1', 'data_storage', 'page_on', 'referrer', 'history_length', 'size_screen_w', 'size_screen_h', 'size_doc_w', 'size_doc_h', 'size_in_w', 'size_in_h', 'size_avail_w', 'size_avail_h', 'scr_color_depth', 'scr_pixel_depth', 'host_name', 'geo_ip', 'geo_country_code', 'geo_region_code', 'geo_region_name', 'geo_city', 'geo_zip_code', 'geo_time_zone', 'geo_latitude', 'geo_longitude', 'visitor_email', 'first_cookie_record', 'browser_plugins_list'], 'string', 'max' => 255],
+            [['project_id', 'domain_id', 'read_write', 'created_at', 'updated_at'], 'required'],
+            [['project_id', 'visitor_id', 'domain_id', 'read_write', 'created_at', 'updated_at'], 'integer'],
+            [['browser_name', 'browser_engine', 'browser_agent', 'browser_language', 'browser_online', 'browser_platform', 'browser_java', 'browser_version', 'data_cookies_enabled', 'data_cookies', 'data_cookies1', 'data_storage', 'page_on', 'referrer', 'history_length', 'size_screen_w', 'size_screen_h', 'size_doc_w', 'size_doc_h', 'size_in_w', 'size_in_h', 'size_avail_w', 'size_avail_h', 'scr_color_depth', 'scr_pixel_depth', 'host_name', 'geo_country_code', 'geo_region_code', 'geo_region_name', 'geo_city', 'geo_zip_code', 'geo_time_zone', 'geo_latitude', 'geo_longitude', 'visitor_email', 'browser_plugins_list'], 'string', 'max' => 255],
             [['domain_id'], 'exist', 'skipOnError' => true, 'targetClass' => Domain::className(), 'targetAttribute' => ['domain_id' => 'id']],
             [['project_id'], 'exist', 'skipOnError' => true, 'targetClass' => Project::className(), 'targetAttribute' => ['project_id' => 'id']],
             [['visitor_id'], 'exist', 'skipOnError' => true, 'targetClass' => Visitor::className(), 'targetAttribute' => ['visitor_id' => 'id']],
@@ -115,7 +116,6 @@ class Scoring extends \yii\db\ActiveRecord
             'scr_color_depth' => 'Scr Color Depth',
             'scr_pixel_depth' => 'Scr Pixel Depth',
             'host_name' => 'Host Name',
-            'geo_ip' => 'Geo Ip',
             'geo_country_code' => 'Geo Country Code',
             'geo_region_code' => 'Geo Region Code',
             'geo_region_name' => 'Geo Region Name',
@@ -125,8 +125,10 @@ class Scoring extends \yii\db\ActiveRecord
             'geo_latitude' => 'Geo Latitude',
             'geo_longitude' => 'Geo Longitude',
             'visitor_email' => 'Visitor Email',
-            'first_cookie_record' => 'First Cookie Record',
             'browser_plugins_list' => 'Browser Plugins List',
+            'read_write' => 'Read Write',
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
         ];
     }
 

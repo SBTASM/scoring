@@ -32,4 +32,13 @@ return [
     'First Name' => 'Имя',
     'Last Name' => 'Фамилия',
     'Email' => 'Почта',
+    'Read' => 'Чтения',
+    'Write' => 'Запись',
+    'Logs' => 'Логи',
+    'Invalid project key!!!' => 'Неверный ключ проекта!!!',
+    'Invalid ip address!!!' => 'Неверный IP',
+    'Profile' => 'Профиль',
+    'Account' => 'Аккаунт',
+    'Social networks' => 'Соц. сети',
+    'My profile' => 'Мой профиль',
 ];

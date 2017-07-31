@@ -1,9 +1,3 @@
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -19,31 +13,6 @@ function getCookie(cname) {
     }
     return "";
 }
-function checkCookie(project_key) {
-    var cookie_name = "scoring_project_key";
-    var cookie_project_key = getCookie(cookie_name);
-    if (cookie_project_key != "") {
-        cookie_name = cookie_name + "visitor_generated_id";
-        var cookie_visitor_key = getCookie(cookie_name);
-        var cookie_data = new Object();
-        cookie_data = {
-            project_key: cookie_project_key,
-            visitor_key: cookie_visitor_key,
-            first_cookie_record: 0
-        };
-        return cookie_data;
-    } else {
-        setCookie(cookie_name, project_key, 8000);
-        var generated_id = generateUniqueId();
-        setCookie(cookie_name + "visitor_generated_id", generated_id, 8000);
-        cookie_data = {
-            project_key: project_key,
-            visitor_key: generated_id,
-            first_cookie_record: 1
-        };
-        return cookie_data;
-    }
-}
 function generateUniqueId() {
     function s4() {
         return Math.floor((1 + Math.random()) * 0x10000)
@@ -54,15 +23,25 @@ function generateUniqueId() {
     return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
         s4() + '-' + s4() + s4() + s4();
 }
-function getVisitorKey(){
-    var cookie = checkCookie(scoringProjectKey());
-
-    if (navigator.cookieEnabled) {
-        var visitor_key = cookie['visitor_key'];
-        var first_cookie_record = cookie['first_cookie_record'];
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 10000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function checkCookie() {
+    var visitor_key = getCookie('my_key');
+    if(visitor_key == ''){
+        visitor_key = generateUniqueId();
+        setCookie('my_key', visitor_key, 365);
+        console.log("Set key: " + visitor_key + "\n");
+    }else{
+        console.log("Key found: " + visitor_key + "\n");
+        return visitor_key;
     }
-
-    return visitor_key;
+}
+function getVisitorKey(){
+    return checkCookie();
 }
 
 function scoring_with_email(){
@@ -102,7 +81,6 @@ function scoring(email_from_form) {
             return plugins_list;
         }
 
-        var first_cookie_record = checkCookie(project_key);
         //Список установленых в браузере плагинов
         var browser_plugins_list = getBrowserPluginsList();
         //Имя браузера
@@ -133,15 +111,6 @@ function scoring(email_from_form) {
         var data_cookies_enabled;
         data_cookies_enabled = navigator.cookieEnabled;
         var visitor_key = getVisitorKey();
-        /*//Cookies
-         var data_cookies;
-         data_cookies = document.cookie;
-         //Cookies_1
-         var data_cookies1;
-         data_cookies1 = decodeURIComponent(document.cookie.split(";"));
-         //localStorage
-         var data_storage;
-         data_storage = localStorage;*/
 
         //Активная страница
         var page_on = window.location.pathname;
@@ -211,9 +180,7 @@ function scoring(email_from_form) {
                         browser_platform: browser_platform,
                         browser_java: browser_java,
                         data_cookies_enabled: data_cookies_enabled,
-                        /*data_cookies : data_cookies,
-                         data_cookies1 : data_cookies1,
-                         data_storage : data_storage,*/
+
                         page_on: page_on,
                         referrer: referrer,
                         history_length: history_length,
@@ -227,18 +194,9 @@ function scoring(email_from_form) {
                         size_avail_h: size_avail_h,
                         scr_color_depth: scr_color_depth,
                         scr_pixel_depth: scr_pixel_depth,
-                        /*latitude : latitude,
-                         longitude : longitude,
-                         accuracy : accuracy,
-                         altitude : altitude,
-                         altitude_accuracy : altitude_accuracy,
-                         heading : heading,
-                         speed : speed,
-                         time_position : time_position*/
                         host_name: host_name,
                         project_key: project_key,
                         visitor_key: visitor_key,
-                        first_cookie_record: first_cookie_record,
 
                         geo_ip: geo_ip,
                         geo_country_code: geo_country_code,

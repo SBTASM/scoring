@@ -20,18 +20,32 @@ class ScoringController extends Controller
 {
     public function actionIndex(){
 
+        $transaction = \Yii::$app->db->beginTransaction();
+
         $data = \Yii::$app->request->get();
+        $scoring = new Scoring();
+        $user_ip = isset($data['geo_ip']) ? $data['geo_ip'] : NULL;
+
+        if(is_null($data['geo_ip'])){
+            throw new NotFoundHttpException(\Yii::t('app', 'Invalid ip address!!!'));
+            return;
+        }
 
         $project = Project::find()->where(['key' => $data['project_key']])->one();
         if(is_null($project)){
-            throw new NotFoundHttpException('Invalid key!!!');
+            throw new NotFoundHttpException(\Yii::t('app', 'Invalid project key!!!'));
+            return;
         }
 
-        $visitor = Visitor::find()->where(['key' => $data['visitor_key']])->one();
+        $visitor = Visitor::find()->where(['key' => $data['visitor_key'], 'ip' => $user_ip])->one();
         if(is_null($visitor)){
             $visitor = new Visitor(['key' => $data['visitor_key']]);
             $visitor->project_id = $project->id;
+            $visitor->ip = $user_ip;
+            $scoring->read_write = 1;
             $visitor->save();
+        }else{
+            $scoring->read_write = 0;
         }
 
 
@@ -52,51 +66,25 @@ class ScoringController extends Controller
             $page->save();
         }
 
-
-        $scoring = new Scoring();
-        $scoring->browser_agent = $data['browser_agent'];
-        $scoring->domain_id = $domain->id;
-        $scoring->project_id = $project->id;
-        $scoring->browser_engine = $data['browser_engine'];
-        $scoring->browser_version = $data['browser_version'];
-        $scoring->browser_agent = $data['browser_agent'];
-        $scoring->browser_language = $data['browser_language'];
-        $scoring->browser_online = $data['browser_online'];
-        $scoring->browser_platform = $data['browser_platform'];
-        $scoring->browser_java = $data['browser_java'];
-        $scoring->data_cookies_enabled = $data['data_cookies_enabled'];
-        $scoring->page_on = $data['page_on'];
-        $scoring->referrer = $data['referrer'];
-        $scoring->history_length = $data['history_length'];
-        $scoring->size_screen_w = $data['size_screen_w'];
-        $scoring->size_screen_h = $data['size_screen_h'];
-//        $scoring->size_doc_w = $data['size_doc_w'];
-//        $scoring->size_doc_h = $data['size_doc_h'];
-        $scoring->size_in_w = $data['size_in_w'];
-        $scoring->size_in_h = $data['size_in_h'];
-        $scoring->size_avail_w = $data['size_avail_w'];
-        $scoring->size_avail_h = $data['size_avail_h'];
-        $scoring->scr_color_depth = $data['scr_color_depth'];
-        $scoring->scr_pixel_depth = $data['scr_pixel_depth'];
-
-        $scoring->visitor_id = $visitor->id;
-
-//        $scoring->first_cookie_record = (string)$data['first_cookie_record'];
-        $scoring->geo_ip = $data['geo_ip'];
-        $scoring->geo_country_code = $data['geo_country_code'];
-        $scoring->geo_region_code = $data['geo_region_code'];
-        $scoring->geo_region_name = $data['geo_region_name'];
-        $scoring->geo_city = $data['geo_city'];
-        $scoring->geo_zip_code = $data['geo_zip_code'];
-        $scoring->geo_time_zone = $data['geo_time_zone'];
-        $scoring->geo_latitude = $data['geo_latitude'];
-        $scoring->geo_longitude = $data['geo_longitude'];
-//        $scoring->visitor_email = $data['visitor_email'];
-
-        if(!$scoring->save()){
-            return $this->serializeData(['errors' => $scoring->getErrors()]);
+        foreach ($data as $name => $value){
+            if($scoring->hasAttribute($name)){
+                $scoring->$name = $value;
+            }
         }
 
+        $scoring->project_id = $project->id;
+        $scoring->visitor_id = $visitor->id;
+        $scoring->domain_id = $domain->id;
+        $scoring->created_at = time();
+        $scoring->updated_at = $scoring->created_at;
+
+        if(!$scoring->save()){
+            $transaction->rollBack();
+            return $this->serializeData(['errors' => $scoring->getErrors()]);
+
+        }
+
+        $transaction->commit();
         return $this->serializeData(['result' => true]);
     }
 //    public function beforeAction($action)

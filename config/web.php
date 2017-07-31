@@ -40,10 +40,35 @@ $config = [
             'class'   => \yii\authclient\Collection::className(),
             'clients' => [
                 'vkontakte' => [
-                    'class'        => 'dektrium\user\clients\VKontakte',
+                    'class'        => \yii\authclient\clients\VKontakte::className(),
                     'clientId'     => '6129257',
                     'clientSecret' => 'apwd8fXf8BarOCPsKwg5',
-                ]
+                ],
+                'facebook' => [
+                    'class'        => 'dektrium\user\clients\Facebook',
+                    'clientId'     => 'APP_ID',
+                    'clientSecret' => 'APP_SECRET',
+                ],
+                'google' => [
+                    'class'        => 'dektrium\user\clients\Google',
+                    'clientId'     => 'CLIENT_ID',
+                    'clientSecret' => 'CLIENT_SECRET',
+                ],
+                'github' => [
+                    'class'        => 'dektrium\user\clients\GitHub',
+                    'clientId'     => 'CLIENT_ID',
+                    'clientSecret' => 'CLIENT_SECRET',
+                ],
+                'yandex' => [
+                    'class'        => 'dektrium\user\clients\Yandex',
+                    'clientId'     => 'CLIENT_ID',
+                    'clientSecret' => 'CLIENT_SECRET'
+                ],
+                'linkedin' => [
+                    'class'        => 'dektrium\user\clients\LinkedIn',
+                    'clientId'     => 'CLIENT_ID',
+                    'clientSecret' => 'CLIENT_SECRET'
+                ],
             ],
         ],
         'errorHandler' => [
@@ -60,8 +85,8 @@ $config = [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
                 [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
+                    'class' => 'yii\log\DbTarget',
+                    'levels' => ['error'],
                 ],
             ],
         ],

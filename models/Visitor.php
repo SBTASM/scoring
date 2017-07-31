@@ -13,11 +13,12 @@ use Yii;
  * @property string $last_name
  * @property string $key
  * @property integer $project_id
+ * @property string $ip
  *
  * @property Scoring[] $scorings
  * @property Project $project
  */
-class Visitor extends \yii\db\ActiveRecord
+class visitor extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -33,9 +34,9 @@ class Visitor extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['key', 'project_id'], 'required'],
+            [['key', 'project_id', 'ip'], 'required'],
             [['project_id'], 'integer'],
-            [['email', 'first_name', 'last_name', 'key'], 'string', 'max' => 255],
+            [['email', 'first_name', 'last_name', 'key', 'ip'], 'string', 'max' => 255],
             [['key'], 'unique'],
             [['email'], 'unique'],
             [['project_id'], 'exist', 'skipOnError' => true, 'targetClass' => Project::className(), 'targetAttribute' => ['project_id' => 'id']],
@@ -54,6 +55,7 @@ class Visitor extends \yii\db\ActiveRecord
             'last_name' => 'Last Name',
             'key' => 'Key',
             'project_id' => 'Project ID',
+            'ip' => 'Ip',
         ];
     }
 

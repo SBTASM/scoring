@@ -2,27 +2,25 @@
 
 namespace app\controllers;
 
-use app\models\Scoring;
 use Yii;
-use app\models\Visitor;
+use app\models\Log;
 use yii\data\ActiveDataProvider;
 use app\base\Controller;
 use yii\web\NotFoundHttpException;
 
 /**
- * VisitorController implements the CRUD actions for Visitor model.
+ * LogController implements the CRUD actions for Log model.
  */
-class VisitorController extends Controller
+class LogController extends Controller
 {
-
     /**
-     * Lists all Visitor models.
+     * Lists all Log models.
      * @return mixed
      */
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Visitor::find(),
+            'query' => Log::find(),
         ]);
 
         return $this->render('index', [
@@ -31,33 +29,25 @@ class VisitorController extends Controller
     }
 
     /**
-     * Displays a single Visitor model.
-     * @param integer $id
+     * Displays a single Log model.
+     * @param string $id
      * @return mixed
      */
     public function actionView($id)
     {
-
-        $dataProvider = new ActiveDataProvider([
-            'query' => Scoring::find()->where(['visitor_id' => $id]),
-        ]);
-
-        $dataProvider->pagination->setPageSize(0);
-
         return $this->render('view', [
             'model' => $this->findModel($id),
-            'dataProvider' => $dataProvider,
         ]);
     }
 
     /**
-     * Creates a new Visitor model.
+     * Creates a new Log model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Visitor();
+        $model = new Log();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -69,9 +59,9 @@ class VisitorController extends Controller
     }
 
     /**
-     * Updates an existing Visitor model.
+     * Updates an existing Log model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      */
     public function actionUpdate($id)
@@ -88,9 +78,9 @@ class VisitorController extends Controller
     }
 
     /**
-     * Deletes an existing Visitor model.
+     * Deletes an existing Log model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      */
     public function actionDelete($id)
@@ -101,18 +91,23 @@ class VisitorController extends Controller
     }
 
     /**
-     * Finds the Visitor model based on its primary key value.
+     * Finds the Log model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Visitor the loaded model
+     * @param string $id
+     * @return Log the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Visitor::findOne($id)) !== null) {
+        if (($model = Log::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionDeleteAll(){
+        Log::deleteAll();
+        return $this->redirect(['log/index']);
     }
 }

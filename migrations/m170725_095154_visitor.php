@@ -33,6 +33,7 @@ class m170725_095154_visitor extends Migration
             'last_name' => $this->string()->defaultValue(NULL),
             'key' => $this->string()->unique()->notNull(),
             'project_id' => $this->integer()->notNull(),
+            'ip' => $this->string()->notNull(),
         ], $tableOptions);
 
         $this->createIndex('idx-visitor-project', 'visitor', 'project_id');

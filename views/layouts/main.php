@@ -44,6 +44,7 @@ AppAsset::register($this);
         ['label' => Yii::t('app', 'Site'), 'items' => [
             ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']],
             ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
+            ['label' => Yii::t('app', 'Logs'), 'url' => ['log/index']],
         ]],
         ['label' => Yii::t('app', 'Scoring'), 'items' => [
             ['label' => Yii::t('app', 'Domains'), 'url' => ['domain/index']],
@@ -52,6 +53,11 @@ AppAsset::register($this);
             ['label' => Yii::t('app', 'Get code'), 'url' => ['project/get-code']],
             ['label' => Yii::t('app', 'Scorings'), 'url' => ['data/index']],
             ['label' => Yii::t('app', 'Pages'), 'url' => ['page/index']],
+        ]],
+        ['label' => Yii::t('app', 'Profile'), 'items' => [
+            ['label' => Yii::t('app', 'Account'), 'url' => ['/account']],
+            ['label' => Yii::t('app', 'Social networks'), 'url' => ['/networks']],
+            ['label' => Yii::t('app', 'My profile'), 'url' => ['/show', 'id' => \Yii::$app->getUser()->id]],
         ]],
         !\Yii::$app->user->isGuest ? '<li>'
             . Html::beginForm(['/logout'], 'post')

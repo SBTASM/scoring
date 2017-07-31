@@ -60,7 +60,7 @@ class m170725_095155_scoring extends Migration
             'scr_color_depth' => $this->string(),
             'scr_pixel_depth' => $this->string(),
             'host_name' => $this->string(),
-            'geo_ip' => $this->string(),
+//            'geo_ip' => $this->string(),
             'geo_country_code' => $this->string(),
             'geo_region_code' => $this->string(),
             'geo_region_name' => $this->string(),
@@ -71,8 +71,13 @@ class m170725_095155_scoring extends Migration
             'geo_longitude' => $this->string(),
 
             'visitor_email' => $this->string(),
-            'first_cookie_record' => $this->string(),
+//            'first_cookie_record' => $this->string(),
             'browser_plugins_list' => $this->string(),
+
+            'read_write' => $this->boolean()->notNull(),
+
+            'created_at' => $this->integer()->notNull(),
+            'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
 
         $this->createIndex('idx-scoring-project', 'scoring', 'project_id');
