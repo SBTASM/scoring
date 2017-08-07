@@ -1,14 +1,20 @@
 <?php
 
+use app\widgets\ExportMenu;
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+$fullExportMenu = ExportMenu::widget([
+    'dataProvider' => $dataProvider,
+]);
+
+
 $layout = <<< HTML
 <div class="pull-right">
-    {export}
+    $fullExportMenu
 </div>
 <div class="pull-left">
     <div class="btn btn-default">{summary}</div>

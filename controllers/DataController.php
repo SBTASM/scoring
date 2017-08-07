@@ -24,8 +24,14 @@ class DataController extends Controller
             'query' => Scoring::find(),
         ]);
 
+        $exportProvider = new ActiveDataProvider([
+            'query' => Scoring::find(),
+        ]);
+        $exportProvider->pagination->setPageSize(0);
+
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'exportProvider' => $exportProvider
         ]);
     }
 

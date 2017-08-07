@@ -82,11 +82,11 @@ $config = [
             'useFileTransport' => true,
         ],
         'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'traceLevel' => YII_DEBUG ? 10 : 0,
             'targets' => [
                 [
                     'class' => 'yii\log\DbTarget',
-                    'levels' => ['error'],
+                    'levels' => ['error', 'warning'],
                 ],
             ],
         ],

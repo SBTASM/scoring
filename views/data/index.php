@@ -1,20 +1,28 @@
 <?php
 
-use yii\helpers\Html;
+use app\widgets\ExportMenu;
+
 use kartik\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+
+$fullExportMenu = ExportMenu::widget([
+    'dataProvider' => $dataProvider,
+    'onRenderSheet' => function ($sheet, $grid){
+        var_dump($sheet, $grid); die();
+    }
+]);
+
+
 $layout = <<< HTML
 <div class="pull-right">
-    {export}
+    $fullExportMenu
 </div>
 <div class="pull-left">
     <div class="btn btn-default">{summary}</div>
 </div>
-
-
 <div class="clearfix"></div>
 <hr>
 <div class="text-center">{items}</div>
@@ -26,7 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="scoring-index">
-<?php Pjax::begin(); ?>    <?= GridView::widget([
+<?php Pjax::begin(); ?>
+<?= GridView::widget([
         'dataProvider' => $dataProvider,
         'layout' => $layout,
         'columns' => [
