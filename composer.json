@@ -22,7 +22,8 @@
         "dektrium/yii2-user": "^0.9.12",
         "2amigos/yii2-tinymce-widget": "^1.1",
         "kartik-v/yii2-widget-alert": "^1.1",
-        "kartik-v/yii2-export": "^1.2"
+        "kartik-v/yii2-export": "^1.2",
+        "kartik-v/yii2-widget-select2": "^2.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

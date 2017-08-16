@@ -27,6 +27,9 @@ $config = [
             'cookieValidationKey' => 'zyZAX_91m1RFreiWK2gsIXD8Iadry9lk',
             'baseUrl' => '',
         ],
+        'keyStorage' => [
+            'class' => 'app\components\keyStorage\KeyStorage'
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

@@ -31,3 +31,5 @@ tests/_support/_generated
 
 node_modules
 scoring.dev.zip
+none
+reset.bat

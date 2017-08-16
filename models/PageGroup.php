@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveQuery;
 
 /**
  * This is the model class for table "Page_group".
@@ -18,7 +19,7 @@ class PageGroup extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'Page_group';
+        return 'page_group';
     }
 
     /**
@@ -43,6 +44,14 @@ class PageGroup extends \yii\db\ActiveRecord
             'id' => 'ID',
             'page_id' => 'Page ID',
             'group_id' => 'Group ID',
+            'rules' => 'Rules'
         ];
+    }
+
+    /**
+     * @return ActiveQuery
+     */
+    public function getGroup(){
+        return $this->hasOne(Group::className(), ['id' => 'group_id']);
     }
 }

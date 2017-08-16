@@ -53,7 +53,12 @@ AppAsset::register($this);
             ['label' => Yii::t('app', 'Get code'), 'url' => ['project/get-code']],
             ['label' => Yii::t('app', 'Scorings'), 'url' => ['data/index']],
             ['label' => Yii::t('app', 'Pages'), 'url' => ['page/index']],
+            ['label' => Yii::t('app', 'Groups'), 'url' => ['group/index']],
         ]],
+//        ['label' => Yii::t('app', 'Points'), 'items' => [
+//            ['label' => Yii::t('app', 'Pages grouping'), 'url' => []],
+//            ['label' => Yii::t('app', 'Points settings'), 'url' => ['points/settings']],
+//        ]],
         ['label' => Yii::t('app', 'Profile'), 'items' => [
             ['label' => Yii::t('app', 'Account'), 'url' => ['/account']],
             ['label' => Yii::t('app', 'Social networks'), 'url' => ['/networks']],

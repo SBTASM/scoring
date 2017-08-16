@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\behaviors\PointsBehavior;
 use Yii;
 
 /**

@@ -7,7 +7,7 @@ return [
     'About' => 'Про нас',
     'Contact' => 'Форма обратной связи',
     'Home' => 'Домой',
-    'Logout ({username})' => 'Вийти ({username})',
+    'Logout ({username})' => 'Выход ({username})',
     'My Company' => 'Скоринг',
     'My Company({project_name})' => 'Скоринг({project_name})',
     'Login' => 'Вход',
@@ -41,4 +41,7 @@ return [
     'Account' => 'Аккаунт',
     'Social networks' => 'Соц. сети',
     'My profile' => 'Мой профиль',
+    'Groups' => 'Групы',
+    'Create Group' => 'Создать групу',
+    'Add rule' => 'Добавить правило'
 ];

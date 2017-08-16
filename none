@@ -1,97 +1,62 @@
-Log opened at 2017-07-27 12:49:21
+Log opened at 2017-08-09 12:10:59
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-27 12:49:21
+Log closed at 2017-08-09 12:10:59
 
-Log opened at 2017-07-27 12:49:29
+Log opened at 2017-08-11 12:45:01
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-27 12:49:29
+Log closed at 2017-08-11 12:45:01
 
-Log opened at 2017-07-27 13:40:59
+Log opened at 2017-08-11 13:40:29
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-27 13:41:00
+Log closed at 2017-08-11 13:40:29
 
-Log opened at 2017-07-27 13:42:18
+Log opened at 2017-08-11 13:40:38
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-27 13:42:18
+Log closed at 2017-08-11 13:40:39
 
-Log opened at 2017-07-29 10:49:39
+Log opened at 2017-08-11 13:40:44
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 10:49:39
+Log closed at 2017-08-11 13:40:44
 
-Log opened at 2017-07-29 10:49:57
+Log opened at 2017-08-11 13:40:49
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 10:49:57
+Log closed at 2017-08-11 13:40:49
 
-Log opened at 2017-07-29 10:50:08
+Log opened at 2017-08-11 13:40:54
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 10:50:09
+Log closed at 2017-08-11 13:40:55
 
-Log opened at 2017-07-29 11:11:20
+Log opened at 2017-08-11 13:41:01
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:11:20
+Log closed at 2017-08-11 13:41:01
 
-Log opened at 2017-07-29 11:12:11
+Log opened at 2017-08-11 13:41:10
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:12:11
+Log closed at 2017-08-11 13:41:11
 
-Log opened at 2017-07-29 11:12:11
+Log opened at 2017-08-11 13:46:22
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:12:12
+Log closed at 2017-08-11 13:46:22
 
-Log opened at 2017-07-29 11:12:22
+Log opened at 2017-08-11 13:46:25
 I: Connecting to configured address/port: localhost:9000.
 E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:12:23
+Log closed at 2017-08-11 13:46:25
 
-Log opened at 2017-07-29 11:12:30
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:12:31
-
-Log opened at 2017-07-29 11:12:31
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:12:31
-
-Log opened at 2017-07-29 11:12:39
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:12:39
-
-Log opened at 2017-07-29 11:12:39
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:12:40
-
-Log opened at 2017-07-29 11:12:46
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:12:47
-
-Log opened at 2017-07-29 11:12:52
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:12:52
-
-Log opened at 2017-07-29 11:13:07
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:13:07
-
-Log opened at 2017-07-29 11:23:53
+Log opened at 2017-08-15 10:07:44
 I: Connecting to configured address/port: localhost:9000.
 I: Connected to client. :-)
--> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="6240" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="12904" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
 
 <- feature_set -i 1 -n show_hidden -v 1
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
@@ -123,17 +88,17 @@ I: Connected to client. :-)
 <- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
 
-<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/commands/RbacController.php -n 43
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="62400001"></response>
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="129040001"></response>
 
-<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 35
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="62400002"></response>
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/views/group/_form.php -n 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="129040002"></response>
 
-<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="62400003"></response>
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="129040003"></response>
 
-<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/controllers/ProjectController.php -n 134
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="62400004"></response>
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="129040004"></response>
 
 <- stack_get -i 15
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="15"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
@@ -142,12 +107,12 @@ I: Connected to client. :-)
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="16" status="stopping" reason="ok"></response>
 
 <- run -i 17
-Log closed at 2017-07-29 11:23:57
+Log closed at 2017-08-15 10:07:46
 
-Log opened at 2017-07-29 11:24:53
+Log opened at 2017-08-15 10:08:35
 I: Connecting to configured address/port: localhost:9000.
 I: Connected to client. :-)
--> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="4052" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="6076" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
 
 <- feature_set -i 1 -n show_hidden -v 1
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
@@ -179,17 +144,17 @@ I: Connected to client. :-)
 <- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
 
-<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/commands/RbacController.php -n 43
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="40520001"></response>
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="60760001"></response>
 
-<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 35
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="40520002"></response>
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/views/group/_form.php -n 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="60760002"></response>
 
-<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="40520003"></response>
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="60760003"></response>
 
-<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/controllers/ProjectController.php -n 134
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="40520004"></response>
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="60760004"></response>
 
 <- stack_get -i 15
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="15"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
@@ -198,12 +163,12 @@ I: Connected to client. :-)
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="16" status="stopping" reason="ok"></response>
 
 <- run -i 17
-Log closed at 2017-07-29 11:25:01
+Log closed at 2017-08-15 10:08:37
 
-Log opened at 2017-07-29 11:25:03
+Log opened at 2017-08-15 10:08:44
 I: Connecting to configured address/port: localhost:9000.
 I: Connected to client. :-)
--> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="1684" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="4852" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
 
 <- feature_set -i 1 -n show_hidden -v 1
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
@@ -235,17 +200,17 @@ I: Connected to client. :-)
 <- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
 
-<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/commands/RbacController.php -n 43
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="16840001"></response>
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="48520001"></response>
 
-<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 35
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="16840002"></response>
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/views/group/_form.php -n 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="48520002"></response>
 
-<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="16840003"></response>
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="48520003"></response>
 
-<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/controllers/ProjectController.php -n 134
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="16840004"></response>
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="48520004"></response>
 
 <- stack_get -i 15
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="15"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
@@ -254,12 +219,12 @@ I: Connected to client. :-)
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="16" status="stopping" reason="ok"></response>
 
 <- run -i 17
-Log closed at 2017-07-29 11:25:06
+Log closed at 2017-08-15 10:08:45
 
-Log opened at 2017-07-29 11:25:13
+Log opened at 2017-08-15 10:10:27
 I: Connecting to configured address/port: localhost:9000.
 I: Connected to client. :-)
--> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="8144" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="4352" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
 
 <- feature_set -i 1 -n show_hidden -v 1
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
@@ -291,17 +256,17 @@ I: Connected to client. :-)
 <- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
 
-<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/commands/RbacController.php -n 43
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="81440001"></response>
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="43520001"></response>
 
-<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 35
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="81440002"></response>
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/views/group/_form.php -n 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="43520002"></response>
 
-<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="81440003"></response>
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="43520003"></response>
 
-<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/controllers/ProjectController.php -n 134
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="81440004"></response>
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="43520004"></response>
 
 <- stack_get -i 15
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="15"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
@@ -310,12 +275,12 @@ I: Connected to client. :-)
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="16" status="stopping" reason="ok"></response>
 
 <- run -i 17
-Log closed at 2017-07-29 11:25:17
+Log closed at 2017-08-15 10:10:29
 
-Log opened at 2017-07-29 11:26:32
+Log opened at 2017-08-15 10:11:31
 I: Connecting to configured address/port: localhost:9000.
 I: Connected to client. :-)
--> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="3852" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="13744" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
 
 <- feature_set -i 1 -n show_hidden -v 1
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
@@ -347,34 +312,31 @@ I: Connected to client. :-)
 <- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
 
-<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/commands/RbacController.php -n 43
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="38520001"></response>
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="137440001"></response>
 
-<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 23
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="38520002"></response>
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/views/group/_form.php -n 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="137440002"></response>
 
-<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="38520003"></response>
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="137440003"></response>
 
-<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 79
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="38520004"></response>
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="137440004"></response>
 
-<- breakpoint_set -i 15 -t line -f file://A:/scoring.dev/controllers/ProjectController.php -n 134
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="15" id="38520005"></response>
+<- stack_get -i 15
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="15"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
 
-<- stack_get -i 16
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="16"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
+<- run -i 16
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="16" status="stopping" reason="ok"></response>
 
 <- run -i 17
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="17" status="stopping" reason="ok"></response>
+Log closed at 2017-08-15 10:11:39
 
-<- run -i 18
-Log closed at 2017-07-29 11:26:33
-
-Log opened at 2017-07-29 11:26:49
+Log opened at 2017-08-15 10:11:40
 I: Connecting to configured address/port: localhost:9000.
 I: Connected to client. :-)
--> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="6684" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="12008" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
 
 <- feature_set -i 1 -n show_hidden -v 1
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
@@ -406,34 +368,31 @@ I: Connected to client. :-)
 <- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
 
-<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/commands/RbacController.php -n 43
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="66840001"></response>
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="120080001"></response>
 
-<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 23
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="66840002"></response>
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/views/group/_form.php -n 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="120080002"></response>
 
-<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="66840003"></response>
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="120080003"></response>
 
-<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 79
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="66840004"></response>
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="120080004"></response>
 
-<- breakpoint_set -i 15 -t line -f file://A:/scoring.dev/controllers/ProjectController.php -n 134
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="15" id="66840005"></response>
+<- stack_get -i 15
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="15"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
 
-<- stack_get -i 16
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="16"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
+<- run -i 16
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="16" status="stopping" reason="ok"></response>
 
 <- run -i 17
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="17" status="stopping" reason="ok"></response>
+Log closed at 2017-08-15 10:11:44
 
-<- run -i 18
-Log closed at 2017-07-29 11:26:50
-
-Log opened at 2017-07-29 11:27:01
+Log opened at 2017-08-15 10:11:45
 I: Connecting to configured address/port: localhost:9000.
 I: Connected to client. :-)
--> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="1812" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="9880" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
 
 <- feature_set -i 1 -n show_hidden -v 1
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
@@ -465,211 +424,31 @@ I: Connected to client. :-)
 <- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
 
-<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/commands/RbacController.php -n 43
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="18120001"></response>
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="98800001"></response>
 
-<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 23
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="18120002"></response>
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/views/group/_form.php -n 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="98800002"></response>
 
-<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="18120003"></response>
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="98800003"></response>
 
-<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 79
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="18120004"></response>
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="98800004"></response>
 
-<- breakpoint_set -i 15 -t line -f file://A:/scoring.dev/controllers/ProjectController.php -n 134
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="15" id="18120005"></response>
+<- stack_get -i 15
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="15"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
 
-<- stack_get -i 16
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="16"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
+<- run -i 16
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="16" status="stopping" reason="ok"></response>
 
 <- run -i 17
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="17" status="stopping" reason="ok"></response>
+Log closed at 2017-08-15 10:11:46
 
-<- run -i 18
-Log closed at 2017-07-29 11:27:07
-
-Log opened at 2017-07-29 11:29:36
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:29:37
-
-Log opened at 2017-07-29 11:30:24
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:30:25
-
-Log opened at 2017-07-29 11:30:28
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:30:28
-
-Log opened at 2017-07-29 11:30:31
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-29 11:30:31
-
-Log opened at 2017-07-31 09:36:21
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:36:22
-
-Log opened at 2017-07-31 09:37:11
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:37:12
-
-Log opened at 2017-07-31 09:37:12
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:37:12
-
-Log opened at 2017-07-31 09:37:24
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:37:24
-
-Log opened at 2017-07-31 09:44:25
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:44:25
-
-Log opened at 2017-07-31 09:45:00
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:45:00
-
-Log opened at 2017-07-31 09:45:19
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:45:20
-
-Log opened at 2017-07-31 09:48:30
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:48:31
-
-Log opened at 2017-07-31 09:49:02
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:49:02
-
-Log opened at 2017-07-31 09:49:06
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:49:07
-
-Log opened at 2017-07-31 09:49:09
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:49:10
-
-Log opened at 2017-07-31 09:59:30
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:59:31
-
-Log opened at 2017-07-31 09:59:39
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:59:39
-
-Log opened at 2017-07-31 09:59:43
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:59:43
-
-Log opened at 2017-07-31 09:59:43
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:59:44
-
-Log opened at 2017-07-31 09:59:45
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 09:59:45
-
-Log opened at 2017-07-31 09:59:55
-I: Connecting to configured address/port: localhost:9000.
-Log opened at 2017-07-31 10:00:01
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 10:00:01
-
-Log opened at 2017-07-31 10:55:52
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 10:55:52
-
-Log opened at 2017-07-31 10:55:52
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 10:55:53
-
-Log opened at 2017-07-31 10:55:59
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 10:56:00
-
-Log opened at 2017-07-31 10:56:02
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 10:56:03
-
-Log opened at 2017-07-31 10:58:03
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 10:58:03
-
-Log opened at 2017-07-31 10:58:06
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 10:58:07
-
-Log opened at 2017-07-31 10:59:49
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 10:59:49
-
-Log opened at 2017-07-31 11:40:43
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 11:40:44
-
-Log opened at 2017-07-31 13:55:07
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 13:55:07
-
-Log opened at 2017-07-31 13:55:16
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 13:55:16
-
-Log opened at 2017-07-31 13:55:20
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 13:55:21
-
-Log opened at 2017-07-31 13:55:21
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 13:55:22
-
-Log opened at 2017-07-31 13:55:24
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 13:55:25
-
-Log opened at 2017-07-31 13:55:37
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 13:55:38
-
-Log opened at 2017-07-31 14:00:09
+Log opened at 2017-08-15 10:11:48
 I: Connecting to configured address/port: localhost:9000.
 I: Connected to client. :-)
--> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="5664" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="2164" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
 
 <- feature_set -i 1 -n show_hidden -v 1
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
@@ -701,110 +480,80 @@ I: Connected to client. :-)
 <- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
 -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
 
-<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 67
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="56640001"></response>
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="21640001"></response>
 
-<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="56640002"></response>
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/views/group/_form.php -n 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="21640002"></response>
 
-<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/commands/RbacController.php -n 43
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="56640003"></response>
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="21640003"></response>
 
-<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 23
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="56640004"></response>
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="21640004"></response>
 
-<- breakpoint_set -i 15 -t line -f file://A:/scoring.dev/controllers/ScoringController.php -n 79
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="15" id="56640005"></response>
+<- stack_get -i 15
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="15"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
 
-<- breakpoint_set -i 16 -t line -f file://A:/scoring.dev/controllers/ProjectController.php -n 134
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="16" id="56640006"></response>
+<- run -i 16
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="16" status="stopping" reason="ok"></response>
 
-<- stack_get -i 17
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="17"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
+<- run -i 17
+Log closed at 2017-08-15 10:11:49
 
-<- run -i 18
--> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="18" status="stopping" reason="ok"></response>
-
-<- run -i 19
-Log closed at 2017-07-31 14:00:15
-
-Log opened at 2017-07-31 15:09:51
+Log opened at 2017-08-15 10:11:51
 I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 15:09:52
+I: Connected to client. :-)
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="9320" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
 
-Log opened at 2017-07-31 15:29:34
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 15:29:34
+<- feature_set -i 1 -n show_hidden -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
 
-Log opened at 2017-07-31 15:41:41
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 15:41:41
+<- feature_set -i 2 -n max_depth -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="max_depth" success="1"></response>
 
-Log opened at 2017-07-31 16:05:50
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 16:05:51
+<- feature_set -i 3 -n max_children -v 100
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="3" feature="max_children" success="1"></response>
 
-Log opened at 2017-07-31 16:05:57
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-07-31 16:05:57
+<- feature_set -i 4 -n extended_properties -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="4" status="starting" reason="ok"><error code="3"><message><![CDATA[invalid or missing options]]></message></error></response>
 
-Log opened at 2017-08-01 10:49:39
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-01 10:49:39
+<- status -i 5
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="status" transaction_id="5" status="starting" reason="ok"></response>
 
-Log opened at 2017-08-01 11:28:53
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-01 11:28:54
+<- step_into -i 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="6" status="break" reason="ok"><xdebug:message filename="file:///A:/scoring.dev/yii" lineno="11"></xdebug:message></response>
 
-Log opened at 2017-08-04 07:39:39
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-04 07:39:39
+<- eval -i 7 -- aXNzZXQoJF9TRVJWRVJbJ1BIUF9JREVfQ09ORklHJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="7"><property type="bool"><![CDATA[0]]></property></response>
 
-Log opened at 2017-08-04 09:36:15
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-04 09:36:15
+<- eval -i 8 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9OQU1FJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="8"><property type="bool"><![CDATA[0]]></property></response>
 
-Log opened at 2017-08-04 09:41:07
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-04 09:41:07
+<- eval -i 9 -- aXNzZXQoJF9TRVJWRVJbJ1NTSF9DT05ORUNUSU9OJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="9"><property type="bool"><![CDATA[0]]></property></response>
 
-Log opened at 2017-08-04 09:41:12
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-04 09:41:12
+<- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
 
-Log opened at 2017-08-04 09:41:46
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-04 09:41:47
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="93200001"></response>
 
-Log opened at 2017-08-04 09:42:40
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-04 09:42:40
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/views/group/_form.php -n 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="93200002"></response>
 
-Log opened at 2017-08-04 09:43:14
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-04 09:43:15
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="93200003"></response>
 
-Log opened at 2017-08-04 09:43:53
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-04 09:43:53
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="93200004"></response>
 
-Log opened at 2017-08-04 09:44:04
-I: Connecting to configured address/port: localhost:9000.
-E: Time-out connecting to client. :-(
-Log closed at 2017-08-04 09:44:04
+<- stack_get -i 15
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="15"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
+
+<- run -i 16
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="16" status="stopping" reason="ok"></response>
+
+<- run -i 17
+Log closed at 2017-08-15 10:11:53
 

@@ -46,9 +46,14 @@ class RbacController extends Controller{
         }
     }
 
-    public function actionAssign($username){
+    public function actionAssign($username, $roleName){
         $user = User::find()->where(['username' => $username])->one();
+        $role = \Yii::$app->authManager->getRole($roleName);
 
-        \Yii::$app->authManager->assign(\Yii::$app->authManager->getRole('admin'), $user->id);
+        if(is_null($user) || is_null($role)){
+            echo "User name or role name invalid";
+        }
+
+        \Yii::$app->authManager->assign($role, $user->id);
     }
 }

@@ -2,9 +2,10 @@
 
 namespace app\controllers;
 
+use app\models\Group;
+use app\models\PageGroup;
 use Yii;
 use app\models\Page;
-use yii\data\ActiveDataProvider;
 use app\base\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,12 +36,12 @@ class PageController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Page::find(),
-        ]);
+        $filterModel = new Page();
+        $dataProvider = $filterModel->search(\Yii::$app->request->queryParams);
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'filterModel' => $filterModel,
         ]);
     }
 
@@ -83,14 +84,17 @@ class PageController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $page_group = new PageGroup(['page_id' => $model->id]);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
+        if ($model->load(Yii::$app->request->post()) && $page_group->load(Yii::$app->request->post()) && $model->save()) {
+            $model->save();
+
+            PageGroup::deleteAll(['page_id' => $model->id]);
+
+            $page_group->save();
         }
+
+        return $this->render('update', ['model' => $model, 'group' => $page_group]);
     }
 
     /**
