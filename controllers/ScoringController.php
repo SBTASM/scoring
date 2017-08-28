@@ -38,6 +38,10 @@ class ScoringController extends Controller
             return;
         }
 
+        //Костиль
+        if(!isset($data['visitor_key'])) return;
+        //Костиль
+
         $visitor = Visitor::find()->where(['key' => $data['visitor_key'], 'ip' => $user_ip])->one();
         if(is_null($visitor)){
             $visitor = new Visitor(['key' => $data['visitor_key']]);
@@ -60,7 +64,11 @@ class ScoringController extends Controller
         $page_name = $data['page_on'];
         $page = Page::find()->where(['name' => $page_name, 'domain_id' => $domain->id])->one();
         if(is_null($page)){
-            $page = new Page(['name' => $page_name, 'domain_id' => $domain->id, 'rating' => '1']);
+            $page = new Page([
+                'name' => $page_name,
+                'domain_id' => $domain->id,
+                'rating' => '1',
+            ]);
             $page->save();
         }else{
             $page->rating = (string)((int)$page->rating + 1);
@@ -100,6 +108,14 @@ class ScoringController extends Controller
      */
     protected function attachRules($scoring, $group){
         if(is_null($group)) return;
-        $rule = $group->rules; $rule = new $rule; $scoring->attachBehavior($rule::className(), $rule);
+
+        $rules = array();
+        if(strlen($group->rules) !== 0){ $rules = explode(':', $group->rules); }
+
+
+        foreach ($rules as $rule){
+            array_push($rules, new $rule);
+            $scoring->attachBehavior($rule::className(), new $rule);
+        }
     }
 }

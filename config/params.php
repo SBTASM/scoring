@@ -19,6 +19,5 @@ return [
     ],
     'rules' => [
         \app\behaviors\PointsBehavior::class,
-        \app\behaviors\TestBehavior::class
     ],
 ];

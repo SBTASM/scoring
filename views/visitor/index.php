@@ -38,9 +38,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 
             'id',
-//            'email:email',
-//            'first_name',
-//            'last_name',
             'key',
              [
                  'label' =>  'request count',
@@ -56,6 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
                  }
              ],
             'ip',
+            'points',
             ['class' => \kartik\grid\ActionColumn::className()],
         ],
     ]); ?>

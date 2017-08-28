@@ -27,7 +27,15 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<?php $project_id = \Yii::$app->getSession()->get('project_id'); ?>
+<?php
+    $project_id = \Yii::$app->getSession()->get('project_id');
+    $project = \app\models\Project::find()->where(['id' => $project_id])->one();
+
+    if(is_null($project)){
+        \Yii::$app->session->remove('project_id');
+        $project_id = NULL;
+    }
+?>
 
 <div class="wrap">
     <?php
@@ -44,14 +52,14 @@ AppAsset::register($this);
         ['label' => Yii::t('app', 'Site'), 'items' => [
             ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']],
             ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
-            ['label' => Yii::t('app', 'Logs'), 'url' => ['log/index']],
+            ['label' => Yii::t('app', 'Logs'), 'url' => ['/log/index']],
         ]],
         ['label' => Yii::t('app', 'Scoring'), 'items' => [
-            ['label' => Yii::t('app', 'Domains'), 'url' => ['domain/index']],
-            ['label' => Yii::t('app', 'Visitors'), 'url' => ['visitor/index']],
-            ['label' => Yii::t('app', 'Projects'), 'url' => ['project/index']],
-            ['label' => Yii::t('app', 'Get code'), 'url' => ['project/get-code']],
-            ['label' => Yii::t('app', 'Scorings'), 'url' => ['data/index']],
+            ['label' => Yii::t('app', 'Domains'), 'url' => ['/domain/index']],
+            ['label' => Yii::t('app', 'Visitors'), 'url' => ['/visitor/index']],
+            ['label' => Yii::t('app', 'Projects'), 'url' => ['/project/index']],
+            ['label' => Yii::t('app', 'Get code'), 'url' => ['/project/get-code']],
+            ['label' => Yii::t('app', 'Scorings'), 'url' => ['/data/index']],
             ['label' => Yii::t('app', 'Pages'), 'url' => ['page/index']],
             ['label' => Yii::t('app', 'Groups'), 'url' => ['group/index']],
         ]],

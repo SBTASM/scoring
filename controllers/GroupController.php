@@ -6,6 +6,7 @@ use app\models\AddRuleForm;
 use app\models\RulesSettingsForm;
 use Yii;
 use app\models\Group;
+use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\base\Controller;
 use yii\web\NotFoundHttpException;
@@ -37,23 +38,10 @@ class GroupController extends Controller
     public function actionView($id)
     {
         $model = $this->findModel($id);
-        $rules = array();
-        $forms = array();
 
-        if(strlen($model->rules) !== 0){
-            $rules = explode(':', $model->rules);
-        }
-
-        foreach ($rules as $rule){
-            array_push($forms, new RulesSettingsForm([
-                'ruleName' => $rule,
-                'description' => (new $rule)->description
-            ]));
-        }
 
         return $this->render('view', [
             'model' => $model,
-            'forms' => $forms
         ]);
     }
 
@@ -67,7 +55,7 @@ class GroupController extends Controller
         $model = new Group();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['/group/view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -84,12 +72,32 @@ class GroupController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $rules = array();
+        $forms = array();
+
+
+        if(strlen($model->rules) !== 0){
+            $rules = explode(':', $model->rules);
+        }
+
+        foreach ($rules as $rule){
+            array_push($forms, new RulesSettingsForm([
+                'ruleName' => $rule,
+                'description' => (new $rule)->description,
+                'group' => $model
+            ]));
+        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            Model::loadMultiple($forms, \Yii::$app->request->post());
+            foreach ($forms as $fs){
+                $fs->save();
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'forms' => $forms
             ]);
         }
     }
@@ -129,15 +137,34 @@ class GroupController extends Controller
 
         if($form->load(\Yii::$app->request->post()) && $form->validate()){
             $rules = explode(':', $group->rules);
-            if(strlen($group->rules) === 0){
-                $rules = array();
-            }
+            if(strlen($group->rules) === 0){ $rules = array(); }
             array_push($rules, $form->ruleName);
             $rules = array_unique($rules);
             $group->rules = implode(':', $rules);
             $group->save();
+
+            return $this->redirect(['/group/update', 'id' => $id]);
         }
 
         return $this->render('add-rule', ['model' => $form]);
+    }
+
+    public function actionDeleteRule($id, $name){
+        $group = $this->findModel($id);
+
+        $this->deleteRule($id, $name);
+
+        return $this->redirect(['group/update', 'id' => $id]);
+    }
+
+    protected function deleteRule($group_id, $rule_name){
+        $rules = array();
+        $group = $this->findModel($group_id);
+
+        if(strlen($group->rules) !== 0){ $rules = explode(':', $group->rules); }
+
+        $rules = array_diff($rules, [$rule_name]);
+        $group->rules = implode(':', $rules);
+        $group->save();
     }
 }

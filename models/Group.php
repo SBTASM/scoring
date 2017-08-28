@@ -27,7 +27,7 @@ class Group extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'rules'], 'required'],
+            [['name'], 'required'],
             [['name', 'rules'], 'string', 'max' => 255],
         ];
     }
@@ -39,7 +39,7 @@ class Group extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
+            'name' => Yii::t('app', 'Name'),
             'rules' => 'Rules'
         ];
     }

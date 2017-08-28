@@ -557,3 +557,343 @@ I: Connected to client. :-)
 <- run -i 17
 Log closed at 2017-08-15 10:11:53
 
+Log opened at 2017-08-18 12:42:31
+I: Connecting to configured address/port: localhost:9000.
+I: Connected to client. :-)
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="6768" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+
+<- feature_set -i 1 -n show_hidden -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
+
+<- feature_set -i 2 -n max_depth -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="max_depth" success="1"></response>
+
+<- feature_set -i 3 -n max_children -v 100
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="3" feature="max_children" success="1"></response>
+
+<- feature_set -i 4 -n extended_properties -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="4" status="starting" reason="ok"><error code="3"><message><![CDATA[invalid or missing options]]></message></error></response>
+
+<- status -i 5
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="status" transaction_id="5" status="starting" reason="ok"></response>
+
+<- step_into -i 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="6" status="break" reason="ok"><xdebug:message filename="file:///A:/scoring.dev/yii" lineno="11"></xdebug:message></response>
+
+<- eval -i 7 -- aXNzZXQoJF9TRVJWRVJbJ1BIUF9JREVfQ09ORklHJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="7"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 8 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9OQU1FJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="8"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 9 -- aXNzZXQoJF9TRVJWRVJbJ1NTSF9DT05ORUNUSU9OJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="9"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
+
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="67680001"></response>
+
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/GroupController.php -n 159
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="67680002"></response>
+
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/behaviors/PointsBehavior.php -n 31
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="67680003"></response>
+
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/models/RulesSettingsForm.php -n 63
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="67680004"></response>
+
+<- breakpoint_set -i 15 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="15" id="67680005"></response>
+
+<- breakpoint_set -i 16 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="16" id="67680006"></response>
+
+<- stack_get -i 17
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="17"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
+
+<- run -i 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="18" status="stopping" reason="ok"></response>
+
+<- run -i 19
+Log closed at 2017-08-18 12:42:43
+
+Log opened at 2017-08-18 12:42:44
+I: Connecting to configured address/port: localhost:9000.
+I: Connected to client. :-)
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="6740" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+
+<- feature_set -i 1 -n show_hidden -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
+
+<- feature_set -i 2 -n max_depth -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="max_depth" success="1"></response>
+
+<- feature_set -i 3 -n max_children -v 100
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="3" feature="max_children" success="1"></response>
+
+<- feature_set -i 4 -n extended_properties -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="4" status="starting" reason="ok"><error code="3"><message><![CDATA[invalid or missing options]]></message></error></response>
+
+<- status -i 5
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="status" transaction_id="5" status="starting" reason="ok"></response>
+
+<- step_into -i 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="6" status="break" reason="ok"><xdebug:message filename="file:///A:/scoring.dev/yii" lineno="11"></xdebug:message></response>
+
+<- eval -i 7 -- aXNzZXQoJF9TRVJWRVJbJ1BIUF9JREVfQ09ORklHJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="7"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 8 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9OQU1FJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="8"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 9 -- aXNzZXQoJF9TRVJWRVJbJ1NTSF9DT05ORUNUSU9OJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="9"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
+
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="67400001"></response>
+
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/GroupController.php -n 159
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="67400002"></response>
+
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/behaviors/PointsBehavior.php -n 31
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="67400003"></response>
+
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/models/RulesSettingsForm.php -n 63
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="67400004"></response>
+
+<- breakpoint_set -i 15 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="15" id="67400005"></response>
+
+<- breakpoint_set -i 16 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="16" id="67400006"></response>
+
+<- stack_get -i 17
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="17"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
+
+<- run -i 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="18" status="stopping" reason="ok"></response>
+
+<- run -i 19
+Log closed at 2017-08-18 12:42:48
+
+Log opened at 2017-08-18 12:42:49
+I: Connecting to configured address/port: localhost:9000.
+I: Connected to client. :-)
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="6352" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+
+<- feature_set -i 1 -n show_hidden -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
+
+<- feature_set -i 2 -n max_depth -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="max_depth" success="1"></response>
+
+<- feature_set -i 3 -n max_children -v 100
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="3" feature="max_children" success="1"></response>
+
+<- feature_set -i 4 -n extended_properties -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="4" status="starting" reason="ok"><error code="3"><message><![CDATA[invalid or missing options]]></message></error></response>
+
+<- status -i 5
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="status" transaction_id="5" status="starting" reason="ok"></response>
+
+<- step_into -i 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="6" status="break" reason="ok"><xdebug:message filename="file:///A:/scoring.dev/yii" lineno="11"></xdebug:message></response>
+
+<- eval -i 7 -- aXNzZXQoJF9TRVJWRVJbJ1BIUF9JREVfQ09ORklHJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="7"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 8 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9OQU1FJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="8"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 9 -- aXNzZXQoJF9TRVJWRVJbJ1NTSF9DT05ORUNUSU9OJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="9"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
+
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="63520001"></response>
+
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/GroupController.php -n 159
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="63520002"></response>
+
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/behaviors/PointsBehavior.php -n 31
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="63520003"></response>
+
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/models/RulesSettingsForm.php -n 63
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="63520004"></response>
+
+<- breakpoint_set -i 15 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="15" id="63520005"></response>
+
+<- breakpoint_set -i 16 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="16" id="63520006"></response>
+
+<- stack_get -i 17
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="17"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
+
+<- run -i 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="18" status="stopping" reason="ok"></response>
+
+<- run -i 19
+Log closed at 2017-08-18 12:42:51
+
+Log opened at 2017-08-18 12:42:52
+I: Connecting to configured address/port: localhost:9000.
+I: Connected to client. :-)
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="3960" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+
+<- feature_set -i 1 -n show_hidden -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
+
+<- feature_set -i 2 -n max_depth -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="max_depth" success="1"></response>
+
+<- feature_set -i 3 -n max_children -v 100
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="3" feature="max_children" success="1"></response>
+
+<- feature_set -i 4 -n extended_properties -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="4" status="starting" reason="ok"><error code="3"><message><![CDATA[invalid or missing options]]></message></error></response>
+
+<- status -i 5
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="status" transaction_id="5" status="starting" reason="ok"></response>
+
+<- step_into -i 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="6" status="break" reason="ok"><xdebug:message filename="file:///A:/scoring.dev/yii" lineno="11"></xdebug:message></response>
+
+<- eval -i 7 -- aXNzZXQoJF9TRVJWRVJbJ1BIUF9JREVfQ09ORklHJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="7"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 8 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9OQU1FJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="8"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 9 -- aXNzZXQoJF9TRVJWRVJbJ1NTSF9DT05ORUNUSU9OJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="9"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
+
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="39600001"></response>
+
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/GroupController.php -n 159
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="39600002"></response>
+
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/behaviors/PointsBehavior.php -n 31
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="39600003"></response>
+
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/models/RulesSettingsForm.php -n 63
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="39600004"></response>
+
+<- breakpoint_set -i 15 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="15" id="39600005"></response>
+
+<- breakpoint_set -i 16 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="16" id="39600006"></response>
+
+<- stack_get -i 17
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="17"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
+
+<- run -i 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="18" status="stopping" reason="ok"></response>
+
+<- run -i 19
+Log closed at 2017-08-18 12:42:53
+
+Log opened at 2017-08-18 12:42:55
+I: Connecting to configured address/port: localhost:9000.
+I: Connected to client. :-)
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///A:/scoring.dev/yii" language="PHP" xdebug:language_version="5.6.1-dev" protocol_version="1.0" appid="3888" idekey="Bogdan"><engine version="2.5.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+
+<- feature_set -i 1 -n show_hidden -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="show_hidden" success="1"></response>
+
+<- feature_set -i 2 -n max_depth -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="max_depth" success="1"></response>
+
+<- feature_set -i 3 -n max_children -v 100
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="3" feature="max_children" success="1"></response>
+
+<- feature_set -i 4 -n extended_properties -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="4" status="starting" reason="ok"><error code="3"><message><![CDATA[invalid or missing options]]></message></error></response>
+
+<- status -i 5
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="status" transaction_id="5" status="starting" reason="ok"></response>
+
+<- step_into -i 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="6" status="break" reason="ok"><xdebug:message filename="file:///A:/scoring.dev/yii" lineno="11"></xdebug:message></response>
+
+<- eval -i 7 -- aXNzZXQoJF9TRVJWRVJbJ1BIUF9JREVfQ09ORklHJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="7"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 8 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9OQU1FJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="8"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 9 -- aXNzZXQoJF9TRVJWRVJbJ1NTSF9DT05ORUNUSU9OJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="9"><property type="bool"><![CDATA[0]]></property></response>
+
+<- eval -i 10 -- aXNzZXQoJF9TRVJWRVJbJ1NFUlZFUl9BRERSJ10p
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="eval" transaction_id="10"><property type="bool"><![CDATA[0]]></property></response>
+
+<- breakpoint_set -i 11 -t line -f file://A:/scoring.dev/rbac/UserGroupRule.php -n 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="11" id="38880001"></response>
+
+<- breakpoint_set -i 12 -t line -f file://A:/scoring.dev/controllers/GroupController.php -n 159
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="12" id="38880002"></response>
+
+<- breakpoint_set -i 13 -t line -f file://A:/scoring.dev/behaviors/PointsBehavior.php -n 31
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="13" id="38880003"></response>
+
+<- breakpoint_set -i 14 -t line -f file://A:/scoring.dev/models/RulesSettingsForm.php -n 63
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="14" id="38880004"></response>
+
+<- breakpoint_set -i 15 -t line -f file://A:/scoring.dev/controllers/SiteController.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="15" id="38880005"></response>
+
+<- breakpoint_set -i 16 -t line -f file://A:/scoring.dev/vendor/kartik-v/yii2-grid/controllers/ExportController.php -n 41
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="16" id="38880006"></response>
+
+<- stack_get -i 17
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="17"><stack where="{main}" level="0" type="file" filename="file:///A:/scoring.dev/yii" lineno="11"></stack></response>
+
+<- run -i 18
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="18" status="stopping" reason="ok"></response>
+
+<- run -i 19
+Log closed at 2017-08-18 12:42:57
+
+Log opened at 2017-08-21 06:45:06
+I: Connecting to configured address/port: localhost:9000.
+E: Time-out connecting to client. :-(
+Log closed at 2017-08-21 06:45:07
+
+Log opened at 2017-08-21 08:54:46
+I: Connecting to configured address/port: localhost:9000.
+E: Time-out connecting to client. :-(
+Log closed at 2017-08-21 08:54:47
+
+Log opened at 2017-08-21 08:54:57
+I: Connecting to configured address/port: localhost:9000.
+E: Time-out connecting to client. :-(
+Log closed at 2017-08-21 08:54:58
+
+Log opened at 2017-08-21 08:55:02
+I: Connecting to configured address/port: localhost:9000.
+E: Time-out connecting to client. :-(
+Log closed at 2017-08-21 08:55:03
+
+Log opened at 2017-08-21 08:55:05
+I: Connecting to configured address/port: localhost:9000.
+E: Time-out connecting to client. :-(
+Log closed at 2017-08-21 08:55:06
+
+Log opened at 2017-08-21 08:55:08
+I: Connecting to configured address/port: localhost:9000.
+E: Time-out connecting to client. :-(
+Log closed at 2017-08-21 08:55:09
+

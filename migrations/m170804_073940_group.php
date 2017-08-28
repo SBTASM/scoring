@@ -9,7 +9,7 @@ class m170804_073940_group extends Migration
         $this->createTable("{{%group}}", [
             'id' => $this->primaryKey(),
             'name' => $this->string()->notNull(),
-            'rules' => $this->string(2048),
+            'rules' => $this->string(2048)->defaultValue(NULL),
         ]);
     }
 

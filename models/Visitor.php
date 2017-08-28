@@ -11,6 +11,7 @@ use Yii;
  * @property string $email
  * @property string $first_name
  * @property string $last_name
+ * @property integer points
  * @property string $key
  * @property integer $project_id
  * @property string $ip
@@ -18,7 +19,7 @@ use Yii;
  * @property Scoring[] $scorings
  * @property Project $project
  */
-class visitor extends \yii\db\ActiveRecord
+class Visitor extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -35,7 +36,7 @@ class visitor extends \yii\db\ActiveRecord
     {
         return [
             [['key', 'project_id', 'ip'], 'required'],
-            [['project_id'], 'integer'],
+            [['project_id', 'points'], 'integer'],
             [['email', 'first_name', 'last_name', 'key', 'ip'], 'string', 'max' => 255],
             [['key'], 'unique'],
             [['email'], 'unique'],
@@ -49,13 +50,14 @@ class visitor extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'email' => 'Email',
-            'first_name' => 'First Name',
-            'last_name' => 'Last Name',
-            'key' => 'Key',
-            'project_id' => 'Project ID',
-            'ip' => 'Ip',
+            'id' => \Yii::t('app', 'ID'),
+            'email' => \Yii::t('app','Email'),
+            'first_name' => \Yii::t('app','First Name'),
+            'last_name' => \Yii::t('app','Last Name'),
+            'points' => \Yii::t('app','Points'),
+            'key' => \Yii::t('app','Key'),
+            'project_id' => \Yii::t('app','Project ID'),
+            'ip' => \Yii::t('app','Ip'),
         ];
     }
 
@@ -73,5 +75,9 @@ class visitor extends \yii\db\ActiveRecord
     public function getProject()
     {
         return $this->hasOne(Project::className(), ['id' => 'project_id']);
+    }
+
+    public function getPages(){
+        return $this->hasMany(Page::className(), ['id' => 'id']);
     }
 }
