@@ -16,7 +16,8 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
         <div class="col-sm-12">
             <?= $this->render('_form', [
                 'model' => $model,
-                'forms' => $forms
+                'forms' => $forms,
+                'addRuleModel' => $addRuleModel
             ]) ?>
         </div>
     </div>

@@ -19,7 +19,7 @@ $rules_list = array();
 
     <div class="row">
         <div class="col-sm-12">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
             </div>
         </div>
@@ -65,13 +65,32 @@ $rules_list = array();
         <div class="col-sm-12">
             <div class="text-center">
                 <div class="form-group">
-                    <?= Html::a(Yii::t('app', 'Add rule'), ['/group/add-rule', 'id' => $model->id], ['class' => 'btn btn-warning']) ?>
-                    <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                    <?= Html::submitButton($model->isNewRecord ? Yii::t('app', \Yii::t('app', 'Create')) : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
                 </div>
             </div>
         </div>
     </div>
 
     <?php ActiveForm::end(); ?>
+
+    <div class="col-sm-12">
+        <div class="text-center">
+            <?php if(!$model->isNewRecord){ ?>
+
+                <?php \yii\bootstrap\Modal::begin([
+//                            'header' => 'test',
+                    'toggleButton' => [
+                        'tag' => 'button',
+                        'class' => 'btn btn-warning',
+                        'label' => Yii::t('app', 'Add rule'),
+                    ]
+                ]) ?>
+
+                <?= $this->render('add-rule', ['model' => $addRuleModel, 'id' => $model->id]) ?>
+
+                <?php \yii\bootstrap\Modal::end() ?>
+            <?php } ?>
+        </div>
+    </div>
 
 </div>

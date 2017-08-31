@@ -51,12 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'last_name',
             'key',
             'ip',
-            [
-                'label' => \Yii::t('app', 'Points'),
-                'value' => function($model){
-                    return $model->getPoints();
-                }
-            ],
+            'points'
         ],
     ]) ?>
     <hr>

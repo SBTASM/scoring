@@ -75,6 +75,7 @@ class m170725_095155_scoring extends Migration
             'browser_plugins_list' => $this->string(),
 
             'read_write' => $this->boolean()->notNull(),
+            'points' => $this->integer()->defaultValue(NULL),
 
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),

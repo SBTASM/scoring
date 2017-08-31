@@ -51,6 +51,7 @@ use Yii;
  * @property integer $read_write
  * @property integer $created_at
  * @property integer $updated_at
+ * @property integer $points
  *
  * @property Domain $domain
  * @property Project $project
@@ -73,7 +74,7 @@ class Scoring extends \yii\db\ActiveRecord
     {
         return [
             [['project_id', 'domain_id', 'read_write', 'created_at', 'updated_at'], 'required'],
-            [['project_id', 'visitor_id', 'domain_id', 'read_write', 'created_at', 'updated_at'], 'integer'],
+            [['project_id', 'visitor_id', 'domain_id', 'read_write', 'created_at', 'updated_at', 'points'], 'integer'],
             [['browser_name', 'browser_engine', 'browser_agent', 'browser_language', 'browser_online', 'browser_platform', 'browser_java', 'browser_version', 'data_cookies_enabled', 'data_cookies', 'data_cookies1', 'data_storage', 'page_on', 'referrer', 'history_length', 'size_screen_w', 'size_screen_h', 'size_doc_w', 'size_doc_h', 'size_in_w', 'size_in_h', 'size_avail_w', 'size_avail_h', 'scr_color_depth', 'scr_pixel_depth', 'host_name', 'geo_country_code', 'geo_region_code', 'geo_region_name', 'geo_city', 'geo_zip_code', 'geo_time_zone', 'geo_latitude', 'geo_longitude', 'visitor_email', 'browser_plugins_list'], 'string', 'max' => 255],
             [['domain_id'], 'exist', 'skipOnError' => true, 'targetClass' => Domain::className(), 'targetAttribute' => ['domain_id' => 'id']],
             [['project_id'], 'exist', 'skipOnError' => true, 'targetClass' => Project::className(), 'targetAttribute' => ['project_id' => 'id']],
@@ -130,6 +131,7 @@ class Scoring extends \yii\db\ActiveRecord
             'read_write' => 'Read Write',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'points' => \Yii::t('app', 'points')
         ];
     }
 

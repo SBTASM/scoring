@@ -3,12 +3,20 @@
 namespace app\controllers;
 
 use app\models\AddRuleForm;
+use app\models\Domain;
+use app\models\Page;
+use app\models\PageGroup;
+use app\models\Project;
 use app\models\RulesSettingsForm;
+use app\models\SetPageGroupForm;
 use Yii;
 use app\models\Group;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\base\Controller;
+use yii\data\ArrayDataProvider;
+use yii\debug\models\timeline\DataProvider;
+use yii\helpers\ArrayHelper;
 use yii\web\NotFoundHttpException;
 /**
  * GroupController implements the CRUD actions for Group model.
@@ -29,7 +37,6 @@ class GroupController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
-
     /**
      * Displays a single Group model.
      * @param integer $id
@@ -38,13 +45,13 @@ class GroupController extends Controller
     public function actionView($id)
     {
         $model = $this->findModel($id);
-
+        $addRuleModel = new AddRuleForm();
 
         return $this->render('view', [
             'model' => $model,
+            'addRuleModel' => $addRuleModel
         ]);
     }
-
     /**
      * Creates a new Group model.
      * If creation is successful, the browser will be redirected to the 'view' page.
@@ -62,7 +69,6 @@ class GroupController extends Controller
             ]);
         }
     }
-
     /**
      * Updates an existing Group model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -72,6 +78,7 @@ class GroupController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $addRuleModel = new AddRuleForm();
         $rules = array();
         $forms = array();
 
@@ -97,11 +104,11 @@ class GroupController extends Controller
         } else {
             return $this->render('update', [
                 'model' => $model,
-                'forms' => $forms
+                'forms' => $forms,
+                'addRuleModel' => $addRuleModel
             ]);
         }
     }
-
     /**
      * Deletes an existing Group model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
@@ -114,7 +121,6 @@ class GroupController extends Controller
 
         return $this->redirect(['index']);
     }
-
     /**
      * Finds the Group model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
@@ -130,7 +136,6 @@ class GroupController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-
     public function actionAddRule($id){
         $group = Group::find()->where(['id' => $id])->one();
         $form = new AddRuleForm();
@@ -148,7 +153,6 @@ class GroupController extends Controller
 
         return $this->render('add-rule', ['model' => $form]);
     }
-
     public function actionDeleteRule($id, $name){
         $group = $this->findModel($id);
 
@@ -156,7 +160,6 @@ class GroupController extends Controller
 
         return $this->redirect(['group/update', 'id' => $id]);
     }
-
     protected function deleteRule($group_id, $rule_name){
         $rules = array();
         $group = $this->findModel($group_id);
@@ -166,5 +169,52 @@ class GroupController extends Controller
         $rules = array_diff($rules, [$rule_name]);
         $group->rules = implode(':', $rules);
         $group->save();
+    }
+    public function actionSetGroup(){
+        $form = new SetPageGroupForm();
+        $domains = array(); $pages = array();
+        $groups = ArrayHelper::map(Group::find()->all(), 'id', 'name');
+
+        if(\Yii::$app->request->isPjax && $form->load(\Yii::$app->request->post())) {
+            $domains = ArrayHelper::map(Domain::findAll(['project_id' => $form->projects]), 'id', 'name');
+            $pages = ArrayHelper::map(Page::findAll(['domain_id' => $form->domains]), 'id', function($model){
+                return urldecode($model->name);
+            });
+
+            if ($form->validate()) {
+                $form->save();
+            }
+        }
+
+        return $this->render('ui', [
+            'model' => $form,
+            'domains' => $domains,
+            'groups' => $groups,
+            'pages' => $pages,
+        ]);
+    }
+    public function actionEditPage($id = NULL){
+
+        if(\Yii::$app->request->isPost && \Yii::$app->request->isAjax){
+            $data = \Yii::$app->request->post('data');
+            if(is_null($data)) return;
+
+            //Deleting actions
+            foreach ($data as $id){
+                PageGroup::deleteAll(['id' => $id]);
+            }
+            //Deleting actions
+        }
+
+        if(is_null($id)) return;
+
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => PageGroup::find()->where(['group_id' => $id]),
+        ]);
+
+
+        return $this->render('edit-pages', ['dataProvider' => $dataProvider]);
+
     }
 }

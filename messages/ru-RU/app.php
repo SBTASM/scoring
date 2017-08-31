@@ -44,5 +44,13 @@ return [
     'Groups' => 'Групы',
     'Create Group' => 'Создать групу',
     'Add rule' => 'Добавить правило',
-    'Points' => 'Очки'
+    'Points' => 'Очки',
+    'Create' => 'Создать',
+    'Add' => 'Добавить',
+    'Save' => 'Сохранить',
+    'Set group for pages' => 'Групы страниц',
+    'Page count of group' => 'Страниц в группе',
+    'Edit pages' => 'Редактировать страницы',
+    'Group' => 'Група',
+    'Delete selected' => 'Удалить выбрание'
 ];

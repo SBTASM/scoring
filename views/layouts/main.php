@@ -62,6 +62,7 @@ AppAsset::register($this);
             ['label' => Yii::t('app', 'Scorings'), 'url' => ['/data/index']],
             ['label' => Yii::t('app', 'Pages'), 'url' => ['page/index']],
             ['label' => Yii::t('app', 'Groups'), 'url' => ['group/index']],
+            ['label' => Yii::t('app', 'Set group for pages'), 'url' => ['/group/set-group']]
         ]],
 //        ['label' => Yii::t('app', 'Points'), 'items' => [
 //            ['label' => Yii::t('app', 'Pages grouping'), 'url' => []],

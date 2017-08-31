@@ -54,4 +54,8 @@ class PageGroup extends \yii\db\ActiveRecord
     public function getGroup(){
         return $this->hasOne(Group::className(), ['id' => 'group_id']);
     }
+
+    public function getPage(){
+        return $this->hasOne(Page::className(), ['id' => 'page_id']);
+    }
 }

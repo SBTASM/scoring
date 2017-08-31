@@ -85,7 +85,7 @@ $config = [
             'useFileTransport' => true,
         ],
         'log' => [
-            'traceLevel' => YII_DEBUG ? 10 : 0,
+            'traceLevel' => YII_DEBUG ? 2 : 0,
             'targets' => [
                 [
                     'class' => 'yii\log\DbTarget',
